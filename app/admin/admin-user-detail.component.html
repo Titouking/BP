@@ -1,0 +1,26 @@
+<div *ngIf="user">
+  <h3>{{user.username}} details!</h3>
+  <div>
+    <label>id: </label>{{user.id}}</div>
+  
+  <div>
+    <label>username: </label>{{user.username}}</div>
+  
+  <div>
+    <label>firstname: </label>{{user.firstName}}</div>
+
+  <div>
+    <label>lastname: </label>{{user.lastName}}</div>
+
+  <div>
+    <label>mail: </label>{{user.email}}</div>
+
+  <div>
+    <label>penguin class: </label>{{user.penguinClass}}</div>
+
+    <!--<a href="admin" class="label label-info m-r-md" >Back</a>-->
+     
+     <p><a [routerLink]="['../../penguin', user.id ]">User's Penguin</a></p>
+
+    <button md-raised-button (click)="goBack()">Back</button>
+</div>

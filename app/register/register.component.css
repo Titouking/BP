@@ -1,0 +1,17 @@
+.class-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.class-radio-button {
+  margin: 5px;
+}
+
+.class-selected-value {
+  margin: 15px 0;
+}
+
+.radio-error{
+    color: #d9534f;
+    margin-left: -110px;
+}

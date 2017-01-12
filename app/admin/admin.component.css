@@ -1,0 +1,19 @@
+ul {
+    padding: 10px 40px 0;
+}
+
+ul md-nav-list{
+    background-color: #4e5d6c;
+}
+
+ul md-nav-list md-list-item {
+    color: white;
+}
+
+/*ul md-nav-list md-list-item.md-list-item-focus, md-nav-list div.md-list-item:hover{
+    background-color: #7b794c;
+}*/
+
+.testclass{
+    color: red;
+}

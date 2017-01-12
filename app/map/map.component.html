@@ -1,0 +1,24 @@
+<img src="/images/maps/map1.jpg" alt="Map1" usemap="#map1" />
+
+<!--<map name="map1">
+ -   <area target="" alt="Village inuit" title="Village inuit" href="" coords="172,657,73,573" shape="rect">
+ -   <area target="" alt="Foret sauvage" title="Foret sauvage" href="" coords="235,513,304,586,249,645,164,624,133,552,165,516" shape="poly">
+ -   <area target="" alt="Rivage des morses" title="Rivage des morses" href="" coords="125,647,386,719" shape="rect">
+ -   <area target="" alt="Plaineaux cariboux" title="Plaineaux cariboux" href="" coords="322,540,63" shape="circle">
+    <area target="" alt="Montagnes du pouvoir" title="Montagnes du pouvoir" href="" coords="161,382,204,447,170,517,92,562,40,566,50,524,133,483" shape="poly">
+    <area target="" alt="Banquise des ours polaires" title="Banquise des ours polaires" href="" coords="71,394,151,413,132,484,67,513,38,435" shape="poly">
+ -   <area target="" alt="Crique des otaries" title="Crique des otaries" href="" coords="450,506,386,550,340,627,399,644,472,623,493,550" shape="poly">
+    <area target="" alt="Citadelle" title="Citadelle" href="" coords="301,456,196,331" shape="rect">
+    <area target="" alt="Terre sauvage des geants des glaces" title="Terre sauvage des geants des glaces" href="" coords="92,276,192,309,192,416,149,409,76,393,49,411,21,356,33,301,67,282" shape="poly">
+    <area target="" alt="Chaine des heros" title="Chaine des heros" href="" coords="161,98,233,61,246,118,235,178,218,227,156,229,144,189" shape="poly">
+    <area target="" alt="Temple" title="Temple" href="" coords="107,125,152,131,142,187,153,228,165,246,142,291,87,274,60,249,73,186" shape="poly">
+    <area target="" alt="Banquise des manchots" title="Banquise des manchots" href="" coords="243,220,307,247,294,285,262,325,236,329,193,330,194,308,143,292,167,244,158,231,203,229" shape="poly">
+    <area target="" alt="Plaque gelee des phoques" title="Plaque gelee des phoques" href="" coords="344,233,444,245,509,273,517,333,461,406,415,299" shape="poly">
+    <area target="" alt="Hauts glaciers" title="Hauts glaciers" href="" coords="331,222,413,298,467,418,412,425,375,331,302,274,313,239" shape="poly">
+    <area target="" alt="Bois imperiaux" title="Bois imperiaux" href="" coords="299,273,375,331,412,427,338,431,302,411,266,322" shape="poly">
+    <area target="" alt="" title="" href="" coords="308,427,453,425,472,472,475,516,394,508,279,485" shape="poly">
+</map>-->
+
+<map name="map1" id="map1">
+    <area *ngFor="let region of mapRegions" shape="{{ region.shape }}" coords="{{ region.coords }}" (click)="regionClicked(region.id, region.type)" title="{{region.type}}" />
+</map>

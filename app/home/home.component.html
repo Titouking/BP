@@ -1,0 +1,14 @@
+<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.username}}!</h1>
+    <div *ngIf="!isAdmin">
+        <p>Number of attacks left: {{ currentUser.playersAttacksLeft }}</p>
+        <p>Monsters attacks left: {{ currentUser.monstersAttacksLeft }}</p>
+
+        <h3>Your penguin class:</h3>
+        <div *ngIf="penguin">
+            <p>{{ penguin.class }}</p>
+            <a [routerLink]="['/profile']">My Profile</a>
+        </div>
+    </div>
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>

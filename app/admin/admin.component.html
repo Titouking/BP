@@ -1,0 +1,44 @@
+<div class="row">
+
+    <h3>Admin panel</h3>
+
+    <router-outlet></router-outlet>
+
+    <div *ngIf="!selectedUser && !selectedPenguin">
+        <div class="testclass">hello</div>
+        <md-tab-group>
+            <md-tab label="Users">
+                <h4>Manage Users:</h4>
+                <ul>
+                    <md-nav-list>
+                        <md-list-item *ngFor="let user of users" >
+                            {{user.id}} : {{user.username}} ({{user.firstName}} {{user.lastName}})
+                            <button md-icon-button (click)="viewUser(user.id)">
+                                <md-icon color="primary">info</md-icon>
+                            </button>
+                            <button md-icon-button (click)="deleteUser(user.id)">
+                                <md-icon color="warn" >delete</md-icon>
+                            </button>
+                        </md-list-item>
+                    </md-nav-list>
+                </ul>
+            </md-tab>
+            <md-tab label="Penguins">
+                <h4>Manage Penguins:</h4>
+                <ul>
+                    <md-nav-list>
+                        <md-list-item *ngFor="let penguin of penguins">
+                            {{penguin.id}} {{penguin.class}} ({{penguin.level}})
+                            <button md-icon-button (click)="viewPenguin(penguin.id)">
+                                <md-icon color="primary">info</md-icon>
+                            </button>
+                            
+                        </md-list-item>
+                    </md-nav-list>
+                </ul> 
+            </md-tab>
+        </md-tab-group>
+    </div>
+
+</div>
+ <p><a [routerLink]="['/login']">Logout</a></p>

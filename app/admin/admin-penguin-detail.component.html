@@ -1,0 +1,46 @@
+<div *ngIf="penguin">
+  <div class="col-md-4">
+        <h3>Penguin details</h3>
+        <img src="{{penguin.image_path}}" alt="" class="thumbnail img-responsive">
+    </div>
+    <div class="col-md-8">
+        <h3>
+            Name : {{ username }} 
+            <small class="level label label-warning"> Lv: {{ penguin.level }}</small>
+        </h3>
+
+        <p>
+            id: {{ penguin.id }}
+        </p>
+        <p>
+            UserId: {{ penguin.userId }}
+        </p>
+
+        <div class="underline-title separator">
+            Info
+        </div>
+        <p>
+            class: {{ penguin.class }}
+        </p>
+        <p>
+            revival: {{ penguin.revival }}
+        </p>
+        <p>
+            exp: {{ penguin.experience }}
+        </p>
+        <p>
+            gold: {{ penguin.gold }}
+        </p>
+        <p>
+            attack: {{ penguin.attackRange }}
+        </p>
+        <p>
+            armor: {{ penguin.stats.dex }}
+        </p>
+        <p>
+            HP: {{ penguin.HP }}
+        </p>
+    </div>
+    <button class="btn btn-primary" (click)="levelUp(penguin)">Level up</button>
+    <button md-raised-button (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,56 @@
+<div *ngIf="penguin">
+    
+    <div class="col-md-4">
+        <h2>Profile</h2>
+        <img src="{{penguin.image_path}}" alt="" class="thumbnail img-responsive">
+    </div>
+    <div class="col-md-8">
+        <h2>
+            Name : {{ username }} 
+            <small class="level label label-warning"> Lv: {{ penguin.level }}</small>
+        </h2>
+        <h3>
+            stats:
+        </h3>
+        <p>
+            exp: {{ penguin.experience }}
+        </p>
+        <p>
+            gold: {{ penguin.gold }}
+        </p>
+        <p>
+            attack: {{ penguin.attackRange }}
+        </p>
+        <p>
+            armor: {{ penguin.stats.dex }}
+        </p>
+        <p>
+            HP: {{ penguin.HP }}
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2>Advanced stats</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>str</td>
+                        <td>{{ penguin.stats.str }}</td>
+                    </tr>
+                   <tr>
+                        <td>dex</td>
+                        <td>{{ penguin.stats.dex }}</td>
+                    </tr>
+                    <tr>
+                        <td>vit</td>
+                        <td>{{ penguin.stats.end }}</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>{{ penguin.stats.int }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div>
