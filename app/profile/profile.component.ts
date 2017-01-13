@@ -49,7 +49,7 @@ export class ProfileComponent implements OnInit {
       this.userService.getUserById(userId).subscribe(user => this.username = user.username)
     }
 
-    private calculatePenguinAttackRange(attack: number[]): string {
-      return "[" + attack[0] + " - " + attack[attack.length - 1] + "]"
+    private calculatePenguinAttackRange(attack: number): string {
+      return "[" + Math.ceil(attack*0.85) + " - " + Math.ceil(attack*1.25) + "]"
     }
 }

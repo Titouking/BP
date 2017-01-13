@@ -1,7 +1,7 @@
 <div *ngIf="penguin">
   <div class="col-md-4">
         <h3>Penguin details</h3>
-        <img src="{{penguin.image_path}}" alt="" class="thumbnail img-responsive">
+        <img src="{{penguin.avatar}}" alt="" class="thumbnail img-responsive">
     </div>
     <div class="col-md-8">
         <h3>
@@ -32,13 +32,13 @@
             gold: {{ penguin.gold }}
         </p>
         <p>
-            attack: {{ penguin.attackRange }}
+            HP: {{ penguin.HP }}
         </p>
         <p>
             armor: {{ penguin.stats.dex }}
         </p>
         <p>
-            HP: {{ penguin.HP }}
+            attack: {{ penguin.attackRange }}
         </p>
     </div>
     <button class="btn btn-primary" (click)="levelUp(penguin)">Level up</button>
